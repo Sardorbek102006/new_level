@@ -40,28 +40,21 @@ print(firstlast(["Edabit",13,"null",False,True]))
 print(firstlast(["undefined",4,"6","hello","null"]))
 
 
-
 def get_budgets(lst):
+    m = []
     for x in lst:
-        pass
-print(get_budgets([{"name": "John", "age": 21, "budget": 23000},
-                   {"name": "Steve", "age": 32, "budget": 40000},
-                   {"name": "Martin", "age": 16, "budget": 2700}
+        lst1, lst2 = x.popitem()
+        m.append(lst2)
+    return sum(m)
+
+
+print(get_budgets([
+    {"name": "John", "age": 21, "budget": 23000},
+    {"name": "Steve", "age": 32, "budget": 40000},
+    {"name": "Martin", "age": 16, "budget": 2700}
 ]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(get_budgets([
+    {"name": "John", "age": 21, "budget": 29000},
+    {"name": "Steve", "age": 32, "budget": 32000},
+    {"name": "Martin", "age": 16, "budget": 1600}
+]))
